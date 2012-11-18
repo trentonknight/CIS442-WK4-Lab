@@ -1,0 +1,6 @@
+DROP TABLE MESSAGES;
+
+CREATE TABLE MESSAGES
+(
+  results varchar2(500) NOT NULL
+);
