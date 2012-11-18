@@ -1,0 +1,52 @@
+@\\Client\H$\Development\CIS442\CIS442-WK4-Lab\message.sql
+
+Table dropped.
+
+
+Table created.
+
+SQL> select * from messages;
+
+no rows selected
+
+SQL> select count(*) from user_tab_columns where table_name = 'MESSAGES';
+
+  COUNT(*)                                                                                                                          
+----------                                                                                                                          
+         1                                                                                                                          
+
+SQL> describe messages;
+ Name                                                                     Null?    Type
+ ------------------------------------------------------------------------ -------- -------------------------------------------------
+ RESULTS                                                                  NOT NULL VARCHAR2(500)
+
+SQL> @\\Client\H$\Development\CIS442\CIS442-WK4-Lab\beta.sql
+SP2-0310: unable to open file "\\Client\H$\Development\CIS442\CIS442-WK4-Lab\beta.sql"
+SQL> EXECUTE newMESSAGES;
+
+PL/SQL procedure successfully completed.
+
+SQL> SELECT * FROM MESSAGES;
+
+RESULTS                                                                                                                             
+------------------------------------------------------------------------------------------------------------------------------------
+BUS*Business Administration                                                                                                         
+BUS*Business Administration                                                                                                         
+BUS*Human Resources                                                                                                                 
+BUS*Management                                                                                                                      
+BUS*Marketing                                                                                                                       
+COM*Communications                                                                                                                  
+CS*Computer Information Systems                                                                                                     
+CS*Computer Science                                                                                                                 
+CS*Computer Networking                                                                                                              
+ENG*English                                                                                                                         
+HP*Nursing                                                                                                                          
+LA*History                                                                                                                          
+LA*Liberal Arts                                                                                                                     
+LA*Undeclared                                                                                                                       
+LA*Political Science                                                                                                                
+SCI*Mathematics                                                                                                                     
+
+16 rows selected.
+
+SQL> 
