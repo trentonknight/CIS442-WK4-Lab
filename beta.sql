@@ -14,15 +14,16 @@ LOOP
 /*c1 loop*/
 FETCH c1 INTO v_DepID;
 EXIT WHEN c1%NOTFOUND;
-END LOOP;
-CLOSE c1;
 OPEN c2;
 LOOP
 FETCH c2 INTO v_Major;
 EXIT WHEN c2%NOTFOUND;
+DBMS_OUTPUT.PUT_LINE(RPAD(v_Major, 3, ' '));
 INSERT INTO MESSAGES VALUES(v_DepID ||'*' || v_Major); 
 END LOOP;
 CLOSE c2;
+END LOOP;
+CLOSE c1;
 END newMESSAGE;
 END;      
 /                 
