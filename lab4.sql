@@ -1,0 +1,7 @@
+CREATE OR REPLACE PROCEDURE makeMessage IS
+DECLARE DeptID varchar(3) DEFAULT '';
+BEGIN
+  null;
+END;
+/
+

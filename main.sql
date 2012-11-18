@@ -1,6 +1,13 @@
-DROP TABLE MESSAGES;
-
+/*Table creation file: main.sql*/
+CREATE OR REPLACE PROCEDURE newMESSAGES 
+AUTHID CURRENT_USER
+IS
+BEGIN
+EXECUTE IMMEDIATE 
 CREATE TABLE MESSAGES
 (
-
+Results varchar2(100) NOT NULL
 );
+END
+/
+/*end table creation*/
